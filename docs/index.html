@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Campus Parking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">CampusPark</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#problem">About</a>
+            <a href="#allocation">Allocation</a>
+            <a href="#algorithms">Algorithms</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="tag">SMART CAMPUS SOLUTION</span>
+            <h1>Intelligent Campus<br>Parking Allocation System</h1>
+            <p>
+                A smart approach to managing campus parking using
+                four different algorithmic techniques.
+            </p>
+            <a href="#allocation" class="primary-btn">
+                Start Parking Allocation
+            </a>
+        </div>
+        <div class="hero-icon">🚗</div>
+    </section>
+
+    <section class="section" id="problem">
+        <h2>About the Problem</h2>
+        <p class="section-description">
+            Campus parking areas have limited space, while many
+            students, faculty members and visitors need parking.
+            Selecting vehicles efficiently helps maximize the
+            number of vehicles accommodated within the available capacity.
+        </p>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>🎯 Objective</h3>
+                <p>Accommodate the maximum number of vehicles.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>⚙️ Solution</h3>
+                <p>Apply four algorithms to solve the allocation problem.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>🌍 Real-World Importance</h3>
+                <p>Improve parking space utilization and reduce inefficient allocation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section allocation-section" id="allocation">
+        <h2>Parking Allocation</h2>
+        <p class="section-description">
+            Enter the available parking capacity and vehicle details.
+        </p>
+
+        <div class="input-panel">
+            <div class="form-group">
+                <label for="capacity">Total Parking Capacity</label>
+                <input type="number" id="capacity"
+                       min="1" placeholder="Enter capacity">
+            </div>
+
+            <div class="vehicle-heading">
+                <h3>Vehicle Details</h3>
+                <button type="button" id="addVehicle" class="add-btn">
+                    + Add Vehicle
+                </button>
+            </div>
+
+            <div id="vehicleList"></div>
+
+            <button type="button" id="runAlgorithms" class="primary-btn">
+                Run All Algorithms
+            </button>
+
+            <p id="errorMessage" class="error-message"></p>
+        </div>
+    </section>
+
+    <section class="section" id="algorithms">
+        <h2>Algorithm Explorer</h2>
+        <p class="section-description">
+            Select an algorithm to understand its approach and results.
+        </p>
+
+        <div class="algorithm-tabs">
+            <button class="tab active" data-algorithm="brute">
+                Brute Force
+            </button>
+
+            <button class="tab" data-algorithm="backtracking">
+                Backtracking
+            </button>
+
+            <button class="tab" data-algorithm="greedy">
+                Greedy
+            </button>
+
+            <button class="tab" data-algorithm="dp">
+                Dynamic Programming
+            </button>
+        </div>
+
+        <div class="result-panel">
+            <h3 id="algorithmTitle">Brute Force</h3>
+
+            <p id="algorithmDescription">
+                Checks all possible combinations of vehicles
+                to find the maximum number that can fit.
+            </p>
+
+            <div class="complexity-grid">
+                <div>
+                    <span>Time Complexity</span>
+                    <h3 id="timeComplexity">O(2ⁿ)</h3>
+                </div>
+
+                <div>
+                    <span>Space Complexity</span>
+                    <h3 id="spaceComplexity">O(n)</h3>
+                </div>
+            </div>
+
+            <h3>Step-by-Step Explanation</h3>
+            <ol id="stepsList">
+                <li>Consider all possible vehicle combinations.</li>
+                <li>Check the total required parking space.</li>
+                <li>Select the combination with the maximum vehicles.</li>
+            </ol>
+
+            <h3>Allocation Results</h3>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span>Vehicles Accommodated</span>
+                    <h2 id="vehicleCount">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <span>Space Used</span>
+                    <h2 id="spaceUsed">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <span>Remaining Space</span>
+                    <h2 id="remainingSpace">0</h2>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Vehicle ID</th>
+                            <th>Type</th>
+                            <th>Space</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="resultTable">
+                        <tr>
+                            <td colspan="4">Run the algorithms to see results.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h3>CampusPark</h3>
+        <p>Intelligent Campus Parking Allocation System</p>
+        <p>Algorithm Explorer Project | 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
